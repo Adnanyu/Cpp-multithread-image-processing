@@ -1,0 +1,196 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+100.00      8.54     8.54                             apply_blur(int, int, ImageData&)
+  0.00      8.54     0.00      803     0.00     0.00  std::filesystem::__cxx11::path::~path()
+  0.00      8.54     0.00      401     0.00     0.00  write_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&)
+  0.00      8.54     0.00      401     0.00     0.00  void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData> >(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData>&&)
+  0.00      8.54     0.00      400     0.00     0.00  read_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&)
+  0.00      8.54     0.00      400     0.00     0.00  process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
+  0.00      8.54     0.00       10     0.00     0.00  void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  0.00      8.54     0.00        4     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00      8.54     0.00        2     0.00     0.00  int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)
+  0.00      8.54     0.00        2     0.00     0.00  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
+  0.00      8.54     0.00        2     0.00     0.00  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+  0.00      8.54     0.00        1     0.00     0.00  process_images(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)
+  0.00      8.54     0.00        1     0.00     0.00  std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.12% of 8.54 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    8.54    0.00                 apply_blur(int, int, ImageData&) [1]
+-----------------------------------------------
+                0.00    0.00     803/803         main [9]
+[11]     0.0    0.00    0.00     803         std::filesystem::__cxx11::path::~path() [11]
+-----------------------------------------------
+                0.00    0.00     401/401         process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [15]
+[12]     0.0    0.00    0.00     401         write_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [12]
+-----------------------------------------------
+                0.00    0.00     401/401         process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [15]
+[13]     0.0    0.00    0.00     401         void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData> >(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData>&&) [13]
+-----------------------------------------------
+                0.00    0.00     400/400         process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [15]
+[14]     0.0    0.00    0.00     400         read_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [14]
+-----------------------------------------------
+                0.00    0.00     400/400         std::thread::_State_impl<std::thread::_Invoker<std::tuple<process_images(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)::{lambda()#1}> > >::_M_run() [31]
+[15]     0.0    0.00    0.00     400         process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [15]
+                0.00    0.00     401/401         void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData> >(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData>&&) [13]
+                0.00    0.00     401/401         write_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [12]
+                0.00    0.00     400/400         read_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [14]
+-----------------------------------------------
+                0.00    0.00      10/10          main [9]
+[16]     0.0    0.00    0.00      10         void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [16]
+-----------------------------------------------
+                0.00    0.00       4/4           main [9]
+[17]     0.0    0.00    0.00       4         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [17]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+[18]     0.0    0.00    0.00       2         int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [18]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+[19]     0.0    0.00    0.00       2         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [19]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+[20]     0.0    0.00    0.00       2         std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [20]
+-----------------------------------------------
+                0.00    0.00       1/1           main [9]
+[21]     0.0    0.00    0.00       1         process_images(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int) [21]
+-----------------------------------------------
+                0.00    0.00       1/1           main [9]
+[22]     0.0    0.00    0.00       1         std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [22]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2023 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [1] apply_blur(int, int, ImageData&) [18] int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [22] std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+  [14] read_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [11] std::filesystem::__cxx11::path::~path() [13] void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData> >(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, void (&)(int, int, ImageData&), int&, int&, std::reference_wrapper<ImageData>&&)
+  [21] process_images(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int) [19] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [17] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  [12] write_png_file(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, ImageData&) [20] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+  [15] process_single_image_multithread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [16] void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)

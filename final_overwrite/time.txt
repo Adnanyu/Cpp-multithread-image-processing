@@ -1,0 +1,12 @@
+single image
+
+real	0m0.169s
+user	0m0.198s
+sys	0m0.004s
+
+2000 images
+real	0m50.608s
+user	7m18.603s
+sys	0m1.751s
+
+

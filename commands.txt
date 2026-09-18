@@ -1,0 +1,1 @@
+g++ blur-recursive.cpp -o blur-rec -lpng

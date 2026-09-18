@@ -1,0 +1,24 @@
+with O3 flag
+
+single image
+real	0m0.177s
+user	0m0.170s
+sys	0m0.007s
+
+
+2000 images
+real	0m57.411s
+user	7m16.174s
+sys	0m1.775s
+
+without O3 flag
+
+single image
+real	0m0.309s
+user	0m0.304s
+sys	0m0.004s
+
+2000 images
+real	2m29.262s
+user	16m56.796s
+sys	0m1.738s

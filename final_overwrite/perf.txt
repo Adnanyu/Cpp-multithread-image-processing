@@ -1,0 +1,15 @@
+Performance counter stats for 'g++ -O3 blur.cpp utility.cpp -o blur -lpng':
+
+            799.13 msec task-clock                       #    0.999 CPUs utilized             
+                79      context-switches                 #   98.858 /sec                      
+                 1      cpu-migrations                   #    1.251 /sec                      
+             16255      page-faults                      #   20.341 K/sec                     
+        2321307941      cycles                           #    2.905 GHz                         (94.22%)
+        6723947041      instructions                     #    2.90  insn per cycle              (94.22%)
+   <not supported>      branches                                                              
+   <not supported>      branch-misses                                                         
+
+       0.800310175 seconds time elapsed
+
+       0.766517000 seconds user
+       0.033049000 seconds sys

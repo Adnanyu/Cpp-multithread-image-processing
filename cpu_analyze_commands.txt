@@ -1,0 +1,27 @@
+# 1. Run your application in the background and get its PID
+./your_application &
+pid=$!
+
+# 2. Monitor with top
+top -p $pid
+
+# 3. Monitor I/O with iostat while the the progrma is running
+iostat 1 10
+
+# 4. Monitor system performance with vmstat while the the progrma is running
+vmstat 1 10
+
+# 5. Monitor CPU usage with mpstat while the the progrma is running
+mpstat -P ALL 1 10
+
+# 6. Profile with perf
+perf record -g -p $pid -- sleep 10
+perf report
+
+perf record -g time ./blur images images_out 8 1  
+
+maybe u need sudo sysctl -w kernel.perf_event_paranoid=-1
+
+#7. check sar for maybe everything like ishaq says
+
+sar -n DEV 1 10
